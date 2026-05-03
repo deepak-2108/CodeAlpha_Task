@@ -80,3 +80,4 @@ The frontend requires Node.js.
 - **Real-time Canvas**: Interactive drawing canvas supporting both mouse and touch input.
 - **Image Preprocessing**: Canvas strokes are converted to Blob, sent to backend, resized to 28x28 grayscale, normalized, and run through the CNN.
 - **Glassmorphism UI**: Uses modern Tailwind styling with neon glow accents and Framer Motion micro-animations.
+# Handwriting-ai-webapp
