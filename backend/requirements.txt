@@ -4,3 +4,4 @@ tensorflow==2.15.0
 numpy==1.26.2
 Pillow==10.1.0
 emnist==0.0.0
+gunicorn==21.2.0
