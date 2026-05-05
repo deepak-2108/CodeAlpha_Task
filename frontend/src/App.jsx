@@ -77,7 +77,7 @@ function App() {
                 <h2 className="text-3xl font-bold font-poppins mb-4">Live Demonstration</h2>
                 <p className="text-slate-400 mb-8">
                   {serverStatus === 'healthy' 
-                    ? "Backend Connected. Choose how you want to input a digit." 
+                    ? `Backend Connected. Choose how you want to input a ${predictionMode === 'digits' ? 'digit' : 'letter'}.` 
                     : "Connecting to backend server..."}
                 </p>
                 
@@ -120,9 +120,9 @@ function App() {
               <div className="grid md:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
                 <div className="flex flex-col items-center">
                   {inputMode === 'draw' ? (
-                    <Canvas onPredict={handlePredict} isPredicting={isPredicting} />
+                    <Canvas onPredict={handlePredict} isPredicting={isPredicting} mode={predictionMode} />
                   ) : (
-                    <Upload onPredict={handlePredict} isPredicting={isPredicting} />
+                    <Upload onPredict={handlePredict} isPredicting={isPredicting} mode={predictionMode} />
                   )}
                 </div>
                 

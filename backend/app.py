@@ -20,13 +20,14 @@ letter_model = None
 
 def load_models():
     global digit_model, letter_model
+    import keras
     try:
         if os.path.exists(DIGIT_MODEL_PATH):
-            digit_model = tf.keras.models.load_model(DIGIT_MODEL_PATH)
+            digit_model = keras.models.load_model(DIGIT_MODEL_PATH)
             print("Digit model loaded.")
         
         if os.path.exists(LETTER_MODEL_PATH):
-            letter_model = tf.keras.models.load_model(LETTER_MODEL_PATH)
+            letter_model = keras.models.load_model(LETTER_MODEL_PATH)
             print("Letter model loaded.")
     except Exception as e:
         print(f"Error loading models: {e}")

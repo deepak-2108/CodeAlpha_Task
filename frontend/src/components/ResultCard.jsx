@@ -36,7 +36,7 @@ const ResultCard = ({ result, onTryAgain }) => {
             <div className="flex mb-2 items-center justify-between">
               <div>
                 <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full bg-slate-800 text-slate-300">
-                  Digit {item.character}
+                  {isNaN(item.character) ? 'Letter' : 'Digit'} {item.character}
                 </span>
               </div>
               <div className="text-right">

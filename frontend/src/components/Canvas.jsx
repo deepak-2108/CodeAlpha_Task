@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Eraser, Trash2, Wand2, Upload } from 'lucide-react';
 
-const Canvas = ({ onPredict, isPredicting }) => {
+const Canvas = ({ onPredict, isPredicting, mode = 'digits' }) => {
   const canvasRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [brushSize, setBrushSize] = useState(15);
@@ -79,7 +79,7 @@ const Canvas = ({ onPredict, isPredicting }) => {
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold flex items-center gap-2">
           <Upload className="w-5 h-5 text-neon-blue" />
-          Draw a Digit (0-9)
+          {mode === 'digits' ? 'Draw a Digit (0-9)' : 'Draw a Letter (A-Z)'}
         </h3>
         <div className="flex items-center gap-2">
           <span className="text-sm text-slate-400">Brush:</span>
