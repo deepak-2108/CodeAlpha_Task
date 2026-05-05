@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Backend is running on port 5001 by default during local development
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
+// Backend is running on Render, with a local fallback if needed
+const API_URL = import.meta.env.VITE_API_URL || 'https://handwriting-ai-webapp.onrender.com';
 
 export const predictImage = async (imageBlob, mode = 'digits') => {
   const formData = new FormData();
