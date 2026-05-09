@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-slate-950 text-slate-50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.dark .glass {
+  @apply bg-slate-900/70 border-slate-800/50;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-medical-600 hover:bg-medical-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-medical-600/20 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.card {
+  @apply p-6 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all duration-300;
+}
+
+.dark .card {
+  @apply bg-slate-900 border-slate-800;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-medical-500 focus:border-transparent outline-none transition-all duration-200;
+}
+
+.dark .input-field {
+  @apply border-slate-700 bg-slate-800 focus:ring-medical-400;
+}
