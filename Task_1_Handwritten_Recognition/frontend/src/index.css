@@ -2,12 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+:root, .theme-cyber {
+  --color-accent-1: #00f3ff;
+  --color-accent-2: #bc13fe;
+  --color-accent-glow: rgba(0, 243, 255, 0.15);
+  --color-accent-2-glow: rgba(188, 19, 254, 0.15);
+  --color-bg-mesh: radial-gradient(at 10% 20%, rgba(0, 243, 255, 0.1) 0px, transparent 40%),
+                    radial-gradient(at 90% 80%, rgba(188, 19, 254, 0.1) 0px, transparent 40%);
+}
+
+.theme-emerald {
+  --color-accent-1: #10b981;
+  --color-accent-2: #06b6d4;
+  --color-accent-glow: rgba(16, 185, 129, 0.15);
+  --color-accent-2-glow: rgba(6, 182, 212, 0.15);
+  --color-bg-mesh: radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0px, transparent 40%),
+                    radial-gradient(at 90% 80%, rgba(6, 182, 212, 0.1) 0px, transparent 40%);
+}
+
+.theme-indigo {
+  --color-accent-1: #6366f1;
+  --color-accent-2: #38bdf8;
+  --color-accent-glow: rgba(99, 102, 241, 0.15);
+  --color-accent-2-glow: rgba(56, 189, 248, 0.15);
+  --color-bg-mesh: radial-gradient(at 10% 20%, rgba(99, 102, 241, 0.1) 0px, transparent 40%),
+                    radial-gradient(at 90% 80%, rgba(56, 189, 248, 0.1) 0px, transparent 40%);
+}
+
+.theme-sunset {
+  --color-accent-1: #f97316;
+  --color-accent-2: #fbbf24;
+  --color-accent-glow: rgba(249, 115, 22, 0.15);
+  --color-accent-2-glow: rgba(251, 191, 36, 0.15);
+  --color-bg-mesh: radial-gradient(at 10% 20%, rgba(249, 115, 22, 0.1) 0px, transparent 40%),
+                    radial-gradient(at 90% 80%, rgba(251, 191, 36, 0.1) 0px, transparent 40%);
+}
+
 @layer utilities {
   .glassmorphism {
-    @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/50 shadow-xl;
+    @apply bg-slate-950/60 backdrop-blur-xl border border-slate-800/80 shadow-2xl shadow-slate-950/50;
   }
   
   .glow-border {
-    @apply relative before:absolute before:-inset-0.5 before:bg-gradient-to-r before:from-neon-blue before:to-neon-violet before:rounded-xl before:blur-sm before:opacity-30 before:-z-10 z-0;
+    @apply relative before:absolute before:-inset-[1px] before:bg-gradient-to-r before:from-[var(--color-accent-1)] before:to-[var(--color-accent-2)] before:rounded-2xl before:blur-[2px] before:opacity-20 hover:before:opacity-40 before:transition-opacity before:-z-10 z-0;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 12px var(--color-accent-glow);
   }
 }
+
+/* Beautiful custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-1);
+}
+

@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         neon: {
-          blue: '#00f3ff',
-          violet: '#bc13fe',
+          blue: 'var(--color-accent-1)',
+          violet: 'var(--color-accent-2)',
         }
       },
       fontFamily: {
@@ -20,3 +20,4 @@ export default {
   },
   plugins: [],
 }
+
